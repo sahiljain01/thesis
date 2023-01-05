@@ -1,0 +1,3 @@
+# Predicting Three-Dimensional Structural Rigidity Prediction with Machine Learning
+
+Two-dimensional rigidity prediction is well understood; however, three-dimensional rigidity is not well understood. In fact, predicting the rigidity of a three-dimensional structure in polynomial time is an open question today; in this project, we seek to use graph neural networks to predict the structural rigidity of 3-dimensional objects.
