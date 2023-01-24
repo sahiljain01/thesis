@@ -12,7 +12,6 @@ from IPython import embed
 def get_new_node(G):
     return max(list(G.nodes)) + 1
 
-
 def get_nodes_of_degree(G, degree):
     """ Returns a list of all nodes from graph G of the specified degree.
     """
@@ -21,7 +20,6 @@ def get_nodes_of_degree(G, degree):
         if d == degree:
             nodes.append(node)
     return nodes
-
 
 def compute_HI(G, act: action.HI, return_inverse=False):
     G = deepcopy(G)

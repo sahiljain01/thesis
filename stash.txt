@@ -1,0 +1,28 @@
+sahil's code stash :)
+
+random functions from pyg dataset class:
+def _get_node_features(self, graph):
+    """
+    Return a matrix / 2d array of the shape
+    [Number of nodes, Node feature size]
+    """
+    # general functionality:
+    # create array of arrays. convert to np array. 
+    # convert to torch tensor with dtype = torch.float
+    pass
+
+def _get_edge_features(self, graph):
+    """
+    Return a matrix / 2d array of the shape
+    [Number of edges, edge feature size]
+    """
+    pass 
+
+def _get_adjacency_matrix(self, graph):
+    """
+    Return matrix / 2d array of the shape
+    [Number of nodes, number of nodes]
+    """
+    # should be a way to just do this from an nx graph
+    # convert to COO (coordinate format)
+    pass

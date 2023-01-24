@@ -45,6 +45,7 @@ def generate_graph(num_nodes, p_type1, rng=np.random):
         else:
             act = generate_random_HII(G, rng=rng)
             if act is None:
+                # couldn't find another node pair
                 return G
             else:
                 G = compute_HII(G, act)
