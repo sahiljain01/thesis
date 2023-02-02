@@ -54,7 +54,7 @@ def generate_graph(num_nodes, p_type1, rng=np.random):
 def generate_dataset(num_graphs, size_dist=None, p_dist=None, rng=np.random, filename=None):
     if not size_dist:
         def size_dist(rng):
-            return int(np.round(rng.normal(loc=30, scale=30)))
+            return int(np.round(rng.normal(loc=500, scale=50)))
     if not p_dist:
         def p_dist(rng):
             return rng.uniform(low=0.4, high=0.6)
@@ -107,8 +107,8 @@ def main():
         default='data.gz',
         help='The output file. If it ends in .gz, will be compressed using gzip')
 
-    parser.add_argument('--num-samples', type=int, default=20000)
-    parser.add_argument('--dod', choices=['low', 'med', 'high'], default='low',
+    parser.add_argument('--num-samples', type=int, default=1500)
+    parser.add_argument('--dod', choices=['low', 'med', 'high'], default='med',
         help='The distribution of the degree of decomposability.')
 
     parser.add_argument('--seed', type=int, default=None)
