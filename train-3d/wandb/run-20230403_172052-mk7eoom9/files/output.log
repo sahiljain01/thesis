@@ -1,0 +1,8 @@
+/opt/anaconda3/envs/thesis/lib/python3.10/site-packages/torch/nn/functional.py:1960: UserWarning: nn.functional.sigmoid is deprecated. Use torch.sigmoid instead.
+  warnings.warn("nn.functional.sigmoid is deprecated. Use torch.sigmoid instead.")
+Traceback (most recent call last):
+  File "/Users/sahiljain/Documents/Fall 2022/Independent Work/thesis/train-3d/train.py", line 133, in <module>
+    train(args.data_dir, 64, args.epochs, args.lr, args.dim, args.layers)
+  File "/Users/sahiljain/Documents/Fall 2022/Independent Work/thesis/train-3d/train.py", line 98, in train
+    loss, h = training_iteration(train_loader)
+TypeError: cannot unpack non-iterable NoneType object

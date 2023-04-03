@@ -1,3 +1,15 @@
+import gzip
+import pickle
+import networkx as nx
+import pandas as pd
+import numpy as np
+import random
+import os
+import torch 
+
+from torch_geometric.data import InMemoryDataset
+from torch_geometric.utils import from_networkx
+
 class LamanDataset(InMemoryDataset):
     def __init__(self, root, data_dir, transform=None, pre_transform=None, pre_filter=None):
         self.data_dir = data_dir
@@ -7,7 +19,15 @@ class LamanDataset(InMemoryDataset):
     @property
     def processed_file_names(self):
         return ['data.pt']
-        
+    
+    def generate_feature_vector(G):
+        x = torch.randn(G.number_of_nodes(), 1)
+        ind = 0
+        for node in G.nodes():
+            x[ind][0] = G.degree[node]
+            ind += 1
+        return x
+
     def process(self):
         # processing code here
         total_laman_data = None
@@ -20,7 +40,7 @@ class LamanDataset(InMemoryDataset):
         for graph in total_laman_data[0]:
             ind += 1
             num_nodes = nx.number_of_nodes(graph)
-            x = generate_feature_vector(graph)
+            x = self.generate_feature_vector(graph)
             graph_as_data = from_networkx(graph)
             graph_as_data.x = x
             graph_as_data.label = 0
@@ -30,7 +50,7 @@ class LamanDataset(InMemoryDataset):
         for graph in total_laman_data[1]:
             ind += 1
             num_nodes = nx.number_of_nodes(graph)
-            x = generate_feature_vector(graph)
+            x = self.generate_feature_vector(graph)
             graph_as_data = from_networkx(graph)
             graph_as_data.x = x
             graph_as_data.label = 1

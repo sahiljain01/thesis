@@ -1,0 +1,1 @@
+/opt/anaconda3/envs/thesis/lib/python3.10/site-packages/torch/nn/functional.py:1960: UserWarning: nn.functional.sigmoid is deprecated. Use torch.sigmoid instead.

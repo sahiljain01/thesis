@@ -1,0 +1,14 @@
+Traceback (most recent call last):
+  File "/Users/sahiljain/Documents/Fall 2022/Independent Work/thesis/train-3d/train.py", line 133, in <module>
+    train(args.data_dir, 64, args.epochs, args.lr, args.dim, args.layers)
+  File "/Users/sahiljain/Documents/Fall 2022/Independent Work/thesis/train-3d/train.py", line 98, in train
+    loss, h = training_iteration(train_loader)
+  File "/Users/sahiljain/Documents/Fall 2022/Independent Work/thesis/train-3d/train.py", line 86, in training_iteration
+    pred, embedding = model(batch.x, batch.edge_index, batch.batch)
+  File "/opt/anaconda3/envs/thesis/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1148, in _call_impl
+    result = forward_call(*input, **kwargs)
+  File "/Users/sahiljain/Documents/Fall 2022/Independent Work/thesis/train-3d/gin/gin_k_layers.py", line 30, in forward
+    hs.append(self.conv_layers[l](hs[-1], edge_index))
+  File "/opt/anaconda3/envs/thesis/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1207, in __getattr__
+    raise AttributeError("'{}' object has no attribute '{}'".format(
+AttributeError: 'GIN' object has no attribute 'conv_layers'

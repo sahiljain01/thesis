@@ -1,0 +1,24 @@
+Traceback (most recent call last):
+  File "/Users/sahiljain/Documents/Fall 2022/Independent Work/thesis/train-3d/train.py", line 136, in <module>
+    train(args.data_dir, 64, args.epochs, args.lr, args.dim, args.layers)
+  File "/Users/sahiljain/Documents/Fall 2022/Independent Work/thesis/train-3d/train.py", line 101, in train
+    loss, h = training_iteration(train_loader)
+  File "/Users/sahiljain/Documents/Fall 2022/Independent Work/thesis/train-3d/train.py", line 87, in training_iteration
+    pred, embedding = model(batch.x, batch.edge_index, batch.batch)
+  File "/opt/anaconda3/envs/thesis/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1148, in _call_impl
+    result = forward_call(*input, **kwargs)
+  File "/Users/sahiljain/Documents/Fall 2022/Independent Work/thesis/train-3d/gin/gin_k_layers.py", line 30, in forward
+    hs[l] = (self.conv_layers[l](hs[l-1], edge_index))
+  File "/opt/anaconda3/envs/thesis/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1130, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/opt/anaconda3/envs/thesis/lib/python3.10/site-packages/torch_geometric/nn/conv/gin_conv.py", line 86, in forward
+    return self.nn(out)
+  File "/opt/anaconda3/envs/thesis/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1130, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/opt/anaconda3/envs/thesis/lib/python3.10/site-packages/torch/nn/modules/container.py", line 139, in forward
+    input = module(input)
+  File "/opt/anaconda3/envs/thesis/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1130, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/opt/anaconda3/envs/thesis/lib/python3.10/site-packages/torch/nn/modules/linear.py", line 114, in forward
+    return F.linear(input, self.weight, self.bias)
+RuntimeError: mat1 and mat2 shapes cannot be multiplied (3872x16 and 1x16)

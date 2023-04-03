@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "/Users/sahiljain/Documents/Fall 2022/Independent Work/thesis/train-3d/train.py", line 133, in <module>
+    train(args.data_dir, 64, args.epochs, args.lr, args.dim, args.layers)
+  File "/Users/sahiljain/Documents/Fall 2022/Independent Work/thesis/train-3d/train.py", line 80, in train
+    train_loader, test_loader = load_data(data_dir, bs)
+  File "/Users/sahiljain/Documents/Fall 2022/Independent Work/thesis/train-3d/train.py", line 41, in load_data
+    laman_data = LamanDataset("", data_dir)
+  File "/Users/sahiljain/Documents/Fall 2022/Independent Work/thesis/train-3d/dataset.py", line 16, in __init__
+    self.data, self.slices = torch.load(self.processed_paths[0])
+NameError: name 'torch' is not defined

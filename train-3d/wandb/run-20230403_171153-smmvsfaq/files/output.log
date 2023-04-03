@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/Users/sahiljain/Documents/Fall 2022/Independent Work/thesis/train-3d/train.py", line 133, in <module>
+    train(args.data_dir, 64, args.epochs, args.lr, args.dim, args.layers)
+  File "/Users/sahiljain/Documents/Fall 2022/Independent Work/thesis/train-3d/train.py", line 74, in train
+    model = gin_k_layers.GIN(num_features=1, layers=layers)
+  File "/Users/sahiljain/Documents/Fall 2022/Independent Work/thesis/train-3d/gin/gin_k_layers.py", line 17, in __init__
+    for l in range(layers):
+TypeError: 'NoneType' object cannot be interpreted as an integer
