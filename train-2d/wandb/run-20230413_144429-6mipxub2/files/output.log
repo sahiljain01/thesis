@@ -1,0 +1,26 @@
+/opt/anaconda3/envs/thesis/lib/python3.10/site-packages/torch/nn/functional.py:1960: UserWarning: nn.functional.sigmoid is deprecated. Use torch.sigmoid instead.
+  warnings.warn("nn.functional.sigmoid is deprecated. Use torch.sigmoid instead.")
+Traceback (most recent call last):
+  File "/Users/sahiljain/Documents/Fall 2022/Independent Work/thesis/train-2d/train.py", line 146, in <module>
+    train(args.data_dir, 64, args.epochs, args.lr, args.dim, args.layers)
+  File "/Users/sahiljain/Documents/Fall 2022/Independent Work/thesis/train-2d/train.py", line 111, in train
+    loss, h = training_iteration(train_loader)
+  File "/Users/sahiljain/Documents/Fall 2022/Independent Work/thesis/train-2d/train.py", line 95, in training_iteration
+    for batch in data:
+  File "/opt/anaconda3/envs/thesis/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 681, in __next__
+    data = self._next_data()
+  File "/opt/anaconda3/envs/thesis/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 721, in _next_data
+    data = self._dataset_fetcher.fetch(index)  # may raise StopIteration
+  File "/opt/anaconda3/envs/thesis/lib/python3.10/site-packages/torch/utils/data/_utils/fetch.py", line 52, in fetch
+    return self.collate_fn(data)
+  File "/opt/anaconda3/envs/thesis/lib/python3.10/site-packages/torch_geometric/loader/dataloader.py", line 20, in __call__
+    return Batch.from_data_list(batch, self.follow_batch,
+  File "/opt/anaconda3/envs/thesis/lib/python3.10/site-packages/torch_geometric/data/batch.py", line 76, in from_data_list
+    batch, slice_dict, inc_dict = collate(
+  File "/opt/anaconda3/envs/thesis/lib/python3.10/site-packages/torch_geometric/data/collate.py", line 84, in collate
+    value, slices, incs = _collate(attr, values, data_list, stores,
+  File "/opt/anaconda3/envs/thesis/lib/python3.10/site-packages/torch_geometric/data/collate.py", line 135, in _collate
+    values = [
+  File "/opt/anaconda3/envs/thesis/lib/python3.10/site-packages/torch_geometric/data/collate.py", line 135, in <listcomp>
+    values = [
+KeyboardInterrupt
